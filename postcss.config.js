@@ -1,6 +1,7 @@
 module.exports = {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  }
+  plugins: {
+    tailwindcss: {},
+    // Remove autoprefixer as it is included by default in Parcel
+    // autoprefixer: {},
+  },
+};
