@@ -21,20 +21,100 @@
   },
   {
     "id": 3,
-    "title": "Racing Masters 2024",
+    "title": "Lethal Compagny",
     "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg",
     "size": "35.7 GB",
-    "category": ["racing"],
+    "category": ["multiplayer","horror"],
     "downloadLink": "/downloads/racing-masters-2024",
     "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 4,
-    "title": "Medieval Legends",
-    "image": "/api/placeholder/280/160",
+    "title": "Diplomacy Is Not an Option",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1272320/header.jpg",
     "size": "28.9 GB",
     "category": ["strategy"],
+    "downloadLink": "/downloads/medieval-legends",
+    "isDownloaded": false,
+    "isLocked": true
+  },
+  {
+    "id": 5,
+    "title": "Snowtopia",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1124260/header.jpg",
+    "size": "238 MB",
+    "category": ["strategy"],
+    "downloadLink": "/downloads/medieval-legends",
+    "isDownloaded": false,
+    "isLocked": true
+  },
+  {
+    "id": 6,
+    "title": "Raft",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/648800/header.jpg",
+    "size": "28.9 GB",
+    "category": ["multiplayer"],
+    "downloadLink": "/downloads/medieval-legends",
+    "isDownloaded": false,
+    "isLocked": true
+  },
+  {
+    "id": 7,
+    "title": "Subnautica",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/264710/header.jpg",
+    "size": "28.9 GB",
+    "category": ["solo"],
+    "downloadLink": "/downloads/medieval-legends",
+    "isDownloaded": false,
+    "isLocked": true
+  },
+  {
+    "id": 8,
+    "title": "Mini Motorways",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1127500/header.jpg",
+    "size": "28.9 GB",
+    "category": ["solo"],
+    "downloadLink": "/downloads/medieval-legends",
+    "isDownloaded": false,
+    "isLocked": true
+  },
+  {
+    "id": 9,
+    "title": "Factorio",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/427520/header.jpg",
+    "size": "28.9 GB",
+    "category": ["multiplayer"],
+    "downloadLink": "/downloads/medieval-legends",
+    "isDownloaded": false,
+    "isLocked": true
+  },
+  {
+    "id": 10,
+    "title": "Planet Coaster 2",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2688950/header.jpg",
+    "size": "28.9 GB",
+    "category": ["multiplayer"],
+    "downloadLink": "/downloads/medieval-legends",
+    "isDownloaded": false,
+    "isLocked": true
+  },
+  {
+    "id": 11,
+    "title": "Prison Architect",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/233450/header.jpg",
+    "size": "28.9 GB",
+    "category": ["multiplayer"],
+    "downloadLink": "/downloads/medieval-legends",
+    "isDownloaded": false,
+    "isLocked": true
+  },
+  {
+    "id": 12,
+    "title": "LOCKDOWN Protocol",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2780980/header.jpg",
+    "size": "28.9 GB",
+    "category": ["multiplayer"],
     "downloadLink": "/downloads/medieval-legends",
     "isDownloaded": false,
     "isLocked": true

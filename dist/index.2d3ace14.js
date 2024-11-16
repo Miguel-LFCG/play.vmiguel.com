@@ -2485,7 +2485,7 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"47lvi":[function(require,module,exports,__globalThis) {
+},{}],"bc6lS":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -2954,7 +2954,7 @@ var _indexCss = require("./index.css"); // Add this line
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","./App":"7F5Te","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./index.css":"irmnC"}],"iTorj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","./App":"7F5Te","./index.css":"irmnC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -27247,7 +27247,7 @@ const GameLibrary = ()=>{
     // Filter games based on search and category
     const filteredGames = games.filter((game)=>{
         const matchesSearch = game.title.toLowerCase().includes(searchTerm.toLowerCase());
-        const matchesCategory = selectedCategory === 'all' || game.category === selectedCategory;
+        const matchesCategory = selectedCategory === 'all' || game.category.includes(selectedCategory);
         return matchesSearch && matchesCategory;
     });
     const gradientClasses = "bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500";
@@ -27305,11 +27305,9 @@ const GameLibrary = ()=>{
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex gap-4 mb-8",
                     children: [
-                        'all',
-                        'action',
-                        'rpg',
-                        'strategy',
-                        'racing'
+                        "all",
+                        "solo",
+                        "multiplayer"
                     ].map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                             onClick: ()=>setSelectedCategory(category),
                             className: `px-4 py-2 rounded-lg capitalize transition-all duration-200 ${selectedCategory === category ? gradientClasses : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'}`,
@@ -27470,7 +27468,7 @@ $RefreshReg$(_c, "GameLibrary");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","lucide-react":"ezznk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./games.json":"3YJfs"}],"ezznk":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","lucide-react":"ezznk","./games.json":"3YJfs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ezznk":[function(require,module,exports,__globalThis) {
 /**
  * lucide-react v0.0.1 - ISC
  */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -33807,7 +33805,10 @@ const Search = (0, _createLucideIconMjsDefault.default)("Search", [
     ]
 ]);
 
-},{"../createLucideIcon.mjs":"bSXhu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports,__globalThis) {
+},{"../createLucideIcon.mjs":"bSXhu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3YJfs":[function(require,module,exports,__globalThis) {
+module.exports = JSON.parse("[{\"id\":1,\"title\":\"Eco\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/382310/header.jpg\",\"size\":\"62.3 GB\",\"category\":[\"multiplayer\",\"light\"],\"downloadLink\":\"/downloads/cyber-nexus-2077\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":2,\"title\":\"Cosmoteer\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/799600/header.jpg\",\"size\":\"48.1 GB\",\"category\":[\"multiplayer\",\"light\"],\"downloadLink\":\"/downloads/star-voyager-ultimate-edition\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":3,\"title\":\"Lethal Compagny\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg\",\"size\":\"35.7 GB\",\"category\":[\"multiplayer\",\"horror\"],\"downloadLink\":\"/downloads/racing-masters-2024\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":4,\"title\":\"Diplomacy Is Not an Option\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1272320/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"strategy\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":5,\"title\":\"Snowtopia\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1124260/header.jpg\",\"size\":\"238 MB\",\"category\":[\"strategy\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":6,\"title\":\"Raft\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/648800/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":7,\"title\":\"Subnautica\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/264710/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"solo\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":8,\"title\":\"Mini Motorways\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1127500/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"solo\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":9,\"title\":\"Factorio\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/427520/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":10,\"title\":\"Planet Coaster 2\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2688950/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":11,\"title\":\"Prison Architect\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/233450/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":12,\"title\":\"LOCKDOWN Protocol\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2780980/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true}]");
+
+},{}],"km3Ru":[function(require,module,exports,__globalThis) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 var { version } = require("630b62916b1ae0e7");
@@ -33952,9 +33953,6 @@ function registerExportsForReactRefresh(module1) {
 },{"7422ead32dcc1e6b":"786KC","630b62916b1ae0e7":"4SQxb"}],"4SQxb":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"name\":\"react-refresh\",\"description\":\"React is a JavaScript library for building user interfaces.\",\"keywords\":[\"react\"],\"version\":\"0.14.2\",\"homepage\":\"https://reactjs.org/\",\"bugs\":\"https://github.com/facebook/react/issues\",\"license\":\"MIT\",\"files\":[\"LICENSE\",\"README.md\",\"babel.js\",\"runtime.js\",\"cjs/\",\"umd/\"],\"main\":\"runtime.js\",\"exports\":{\".\":\"./runtime.js\",\"./runtime\":\"./runtime.js\",\"./babel\":\"./babel.js\",\"./package.json\":\"./package.json\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/facebook/react.git\",\"directory\":\"packages/react\"},\"engines\":{\"node\":\">=0.10.0\"},\"devDependencies\":{\"react-16-8\":\"npm:react@16.8.0\",\"react-dom-16-8\":\"npm:react-dom@16.8.0\",\"scheduler-0-13\":\"npm:scheduler@0.13.0\"}}");
 
-},{}],"3YJfs":[function(require,module,exports,__globalThis) {
-module.exports = JSON.parse("[{\"id\":1,\"title\":\"Cyber Nexus 2077\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/382310/header.jpg\",\"size\":\"62.3 GB\",\"category\":\"action\",\"downloadLink\":\"/downloads/cyber-nexus-2077\",\"isDownloaded\":false,\"isLocked\":false},{\"id\":2,\"title\":\"Star Voyager: Ultimate Edition\",\"image\":\"/api/placeholder/280/160\",\"size\":\"48.1 GB\",\"category\":\"rpg\",\"downloadLink\":\"/downloads/star-voyager-ultimate-edition\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":3,\"title\":\"Racing Masters 2024\",\"image\":\"/api/placeholder/280/160\",\"size\":\"35.7 GB\",\"category\":\"racing\",\"downloadLink\":\"/downloads/racing-masters-2024\",\"isDownloaded\":false,\"isLocked\":false},{\"id\":4,\"title\":\"Medieval Legends\",\"image\":\"/api/placeholder/280/160\",\"size\":\"28.9 GB\",\"category\":\"strategy\",\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true}]");
-
-},{}],"irmnC":[function() {},{}]},["aQL8O","47lvi","4aBH6"], "4aBH6", "parcelRequire94c2")
+},{}],"irmnC":[function() {},{}]},["aQL8O","bc6lS","4aBH6"], "4aBH6", "parcelRequire94c2")
 
 //# sourceMappingURL=index.2d3ace14.js.map
