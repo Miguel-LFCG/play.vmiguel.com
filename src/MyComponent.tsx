@@ -81,7 +81,7 @@ const GameLibrary = () => {
                 {/* Action Buttons */}
                 <div className="flex gap-2">
                   <a
-                    href={`https://vmiguel.com/games/${game.steamid}`}
+                    href={`https://vmiguel.com/games/${game.steamid}.zip`}
                     className={`flex-1 py-2 px-4 rounded-lg flex items-center justify-center gap-2 ${
                       game.isLocked ? lockedClasses : gradientClasses
                     } ${startedDownloads[game.id] ? 'bg-green-600' : ''}`}

@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Eco",
     "steamid": "382310",
-    "size": "62.3 GB",
+    "size": "- GB",
     "category": ["multiplayer", "light"],
     "isLocked": true
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "title": "Cosmoteer",
     "steamid": "799600",
-    "size": "48.1 GB",
+    "size": "- GB",
     "category": ["multiplayer", "light"],
     "isLocked": true
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "title": "Lethal Compagny",
     "steamid": "1966720",
-    "size": "35.7 GB",
+    "size": "- GB",
     "category": ["multiplayer", "horror"],
     "isLocked": true
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "title": "Diplomacy Is Not an Option",
     "steamid": "1272320",
-    "size": "28.9 GB",
+    "size": "- GB",
     "category": ["strategy"],
     "isLocked": true
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "title": "Raft",
     "steamid": "648800",
-    "size": "28.9 GB",
+    "size": "- GB",
     "category": ["multiplayer"],
     "isLocked": true
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "title": "Subnautica",
     "steamid": "264710",
-    "size": "28.9 GB",
+    "size": "- GB",
     "category": ["solo"],
     "isLocked": true
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "title": "Mini Motorways",
     "steamid": "1127500",
-    "size": "28.9 GB",
+    "size": "- GB",
     "category": ["solo"],
     "isLocked": true
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "title": "Factorio",
     "steamid": "427520",
-    "size": "28.9 GB",
+    "size": "- GB",
     "category": ["multiplayer"],
     "isLocked": true
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "title": "Planet Coaster 2",
     "steamid": "2688950",
-    "size": "28.9 GB",
+    "size": "- GB",
     "category": ["multiplayer"],
     "isLocked": true
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "title": "Prison Architect",
     "steamid": "233450",
-    "size": "28.9 GB",
+    "size": "- GB",
     "category": ["multiplayer"],
     "isLocked": true
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "title": "LOCKDOWN Protocol",
     "steamid": "2780980",
-    "size": "28.9 GB",
+    "size": "- GB",
     "category": ["multiplayer"],
     "isLocked": true
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "title": "Evil Genius 2",
     "steamid": "700600",
-    "size": "28.9 GB",
+    "size": "- GB",
     "category": ["solo"],
     "isLocked": true
   },
@@ -107,8 +107,8 @@
     "id": 14,
     "title": "Colony Survival",
     "steamid": "366090",
-    "size": "28.9 GB",
+    "size": "74,8 MB",
     "category": ["multiplayer"],
-    "isLocked": true
+    "isLocked": false
   }
 ]
