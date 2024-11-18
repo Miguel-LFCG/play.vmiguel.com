@@ -2,121 +2,113 @@
   {
     "id": 1,
     "title": "Eco",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/382310/header.jpg",
+    "steamid": "382310",
     "size": "62.3 GB",
     "category": ["multiplayer", "light"],
-    "downloadLink": "/downloads/cyber-nexus-2077",
-    "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 2,
     "title": "Cosmoteer",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/799600/header.jpg",
+    "steamid": "799600",
     "size": "48.1 GB",
     "category": ["multiplayer", "light"],
-    "downloadLink": "/downloads/star-voyager-ultimate-edition",
-    "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 3,
     "title": "Lethal Compagny",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg",
+    "steamid": "1966720",
     "size": "35.7 GB",
-    "category": ["multiplayer","horror"],
-    "downloadLink": "/downloads/racing-masters-2024",
-    "isDownloaded": false,
+    "category": ["multiplayer", "horror"],
     "isLocked": true
   },
   {
     "id": 4,
     "title": "Diplomacy Is Not an Option",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1272320/header.jpg",
+    "steamid": "1272320",
     "size": "28.9 GB",
     "category": ["strategy"],
-    "downloadLink": "/downloads/medieval-legends",
-    "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 5,
     "title": "Snowtopia",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1124260/header.jpg",
+    "steamid": "1124260",
     "size": "238 MB",
     "category": ["strategy"],
-    "downloadLink": "/downloads/medieval-legends",
-    "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 6,
     "title": "Raft",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/648800/header.jpg",
+    "steamid": "648800",
     "size": "28.9 GB",
     "category": ["multiplayer"],
-    "downloadLink": "/downloads/medieval-legends",
-    "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 7,
     "title": "Subnautica",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/264710/header.jpg",
+    "steamid": "264710",
     "size": "28.9 GB",
     "category": ["solo"],
-    "downloadLink": "/downloads/medieval-legends",
-    "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 8,
     "title": "Mini Motorways",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1127500/header.jpg",
+    "steamid": "1127500",
     "size": "28.9 GB",
     "category": ["solo"],
-    "downloadLink": "/downloads/medieval-legends",
-    "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 9,
     "title": "Factorio",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/427520/header.jpg",
+    "steamid": "427520",
     "size": "28.9 GB",
     "category": ["multiplayer"],
-    "downloadLink": "/downloads/medieval-legends",
-    "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 10,
     "title": "Planet Coaster 2",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2688950/header.jpg",
+    "steamid": "2688950",
     "size": "28.9 GB",
     "category": ["multiplayer"],
-    "downloadLink": "/downloads/medieval-legends",
-    "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 11,
     "title": "Prison Architect",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/233450/header.jpg",
+    "steamid": "233450",
     "size": "28.9 GB",
     "category": ["multiplayer"],
-    "downloadLink": "/downloads/medieval-legends",
-    "isDownloaded": false,
     "isLocked": true
   },
   {
     "id": 12,
     "title": "LOCKDOWN Protocol",
-    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2780980/header.jpg",
+    "steamid": "2780980",
     "size": "28.9 GB",
     "category": ["multiplayer"],
-    "downloadLink": "/downloads/medieval-legends",
-    "isDownloaded": false,
+    "isLocked": true
+  },
+  {
+    "id": 13,
+    "title": "Evil Genius 2",
+    "steamid": "700600",
+    "size": "28.9 GB",
+    "category": ["solo"],
+    "isLocked": true
+  },
+  {
+    "id": 14,
+    "title": "Colony Survival",
+    "steamid": "366090",
+    "size": "28.9 GB",
+    "category": ["multiplayer"],
     "isLocked": true
   }
 ]

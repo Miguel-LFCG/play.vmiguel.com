@@ -2485,7 +2485,7 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"bc6lS":[function(require,module,exports,__globalThis) {
+},{}],"47lvi":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -27328,7 +27328,7 @@ const GameLibrary = ()=>{
                             className: "bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-200",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    src: game.image,
+                                    src: `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.steamid}/header.jpg`,
                                     alt: game.title,
                                     className: "w-full object-cover"
                                 }, void 0, false, {
@@ -27363,24 +27363,8 @@ const GameLibrary = ()=>{
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             className: "flex gap-2",
-                                            children: game.isDownloaded ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                className: "flex-1 bg-gradient-to-r from-green-600 to-green-400 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2",
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lucideReact.CheckCircle), {
-                                                        size: 18
-                                                    }, void 0, false, {
-                                                        fileName: "src/MyComponent.tsx",
-                                                        lineNumber: 85,
-                                                        columnNumber: 23
-                                                    }, undefined),
-                                                    "Downloaded"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/MyComponent.tsx",
-                                                lineNumber: 84,
-                                                columnNumber: 21
-                                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                href: game.downloadLink,
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                href: `https://vmiguel.com/games/${game.steamid}`,
                                                 className: `flex-1 py-2 px-4 rounded-lg flex items-center justify-center gap-2 ${game.isLocked ? lockedClasses : gradientClasses} ${startedDownloads[game.id] ? 'bg-green-600' : ''}`,
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
@@ -27393,27 +27377,27 @@ const GameLibrary = ()=>{
                                                         size: 18
                                                     }, void 0, false, {
                                                         fileName: "src/MyComponent.tsx",
-                                                        lineNumber: 104,
-                                                        columnNumber: 40
+                                                        lineNumber: 98,
+                                                        columnNumber: 38
                                                     }, undefined) : startedDownloads[game.id] ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lucideReact.CheckCircle), {
                                                         size: 18
                                                     }, void 0, false, {
                                                         fileName: "src/MyComponent.tsx",
-                                                        lineNumber: 104,
-                                                        columnNumber: 89
+                                                        lineNumber: 98,
+                                                        columnNumber: 87
                                                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lucideReact.Download), {
                                                         size: 18
                                                     }, void 0, false, {
                                                         fileName: "src/MyComponent.tsx",
-                                                        lineNumber: 104,
-                                                        columnNumber: 117
+                                                        lineNumber: 98,
+                                                        columnNumber: 115
                                                     }, undefined),
                                                     game.isLocked ? 'Locked' : startedDownloads[game.id] ? 'Download Started' : 'Download'
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/MyComponent.tsx",
-                                                lineNumber: 89,
-                                                columnNumber: 21
+                                                lineNumber: 83,
+                                                columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/MyComponent.tsx",
@@ -27442,7 +27426,7 @@ const GameLibrary = ()=>{
                     children: "No games found matching your search criteria"
                 }, void 0, false, {
                     fileName: "src/MyComponent.tsx",
-                    lineNumber: 115,
+                    lineNumber: 108,
                     columnNumber: 11
                 }, undefined)
             ]
@@ -33806,7 +33790,7 @@ const Search = (0, _createLucideIconMjsDefault.default)("Search", [
 ]);
 
 },{"../createLucideIcon.mjs":"bSXhu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3YJfs":[function(require,module,exports,__globalThis) {
-module.exports = JSON.parse("[{\"id\":1,\"title\":\"Eco\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/382310/header.jpg\",\"size\":\"62.3 GB\",\"category\":[\"multiplayer\",\"light\"],\"downloadLink\":\"/downloads/cyber-nexus-2077\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":2,\"title\":\"Cosmoteer\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/799600/header.jpg\",\"size\":\"48.1 GB\",\"category\":[\"multiplayer\",\"light\"],\"downloadLink\":\"/downloads/star-voyager-ultimate-edition\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":3,\"title\":\"Lethal Compagny\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg\",\"size\":\"35.7 GB\",\"category\":[\"multiplayer\",\"horror\"],\"downloadLink\":\"/downloads/racing-masters-2024\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":4,\"title\":\"Diplomacy Is Not an Option\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1272320/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"strategy\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":5,\"title\":\"Snowtopia\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1124260/header.jpg\",\"size\":\"238 MB\",\"category\":[\"strategy\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":6,\"title\":\"Raft\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/648800/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":7,\"title\":\"Subnautica\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/264710/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"solo\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":8,\"title\":\"Mini Motorways\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1127500/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"solo\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":9,\"title\":\"Factorio\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/427520/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":10,\"title\":\"Planet Coaster 2\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2688950/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":11,\"title\":\"Prison Architect\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/233450/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true},{\"id\":12,\"title\":\"LOCKDOWN Protocol\",\"image\":\"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2780980/header.jpg\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"downloadLink\":\"/downloads/medieval-legends\",\"isDownloaded\":false,\"isLocked\":true}]");
+module.exports = JSON.parse("[{\"id\":1,\"title\":\"Eco\",\"steamid\":\"382310\",\"size\":\"62.3 GB\",\"category\":[\"multiplayer\",\"light\"],\"isLocked\":true},{\"id\":2,\"title\":\"Cosmoteer\",\"steamid\":\"799600\",\"size\":\"48.1 GB\",\"category\":[\"multiplayer\",\"light\"],\"isLocked\":true},{\"id\":3,\"title\":\"Lethal Compagny\",\"steamid\":\"1966720\",\"size\":\"35.7 GB\",\"category\":[\"multiplayer\",\"horror\"],\"isLocked\":true},{\"id\":4,\"title\":\"Diplomacy Is Not an Option\",\"steamid\":\"1272320\",\"size\":\"28.9 GB\",\"category\":[\"strategy\"],\"isLocked\":true},{\"id\":5,\"title\":\"Snowtopia\",\"steamid\":\"1124260\",\"size\":\"238 MB\",\"category\":[\"strategy\"],\"isLocked\":true},{\"id\":6,\"title\":\"Raft\",\"steamid\":\"648800\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true},{\"id\":7,\"title\":\"Subnautica\",\"steamid\":\"264710\",\"size\":\"28.9 GB\",\"category\":[\"solo\"],\"isLocked\":true},{\"id\":8,\"title\":\"Mini Motorways\",\"steamid\":\"1127500\",\"size\":\"28.9 GB\",\"category\":[\"solo\"],\"isLocked\":true},{\"id\":9,\"title\":\"Factorio\",\"steamid\":\"427520\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true},{\"id\":10,\"title\":\"Planet Coaster 2\",\"steamid\":\"2688950\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true},{\"id\":11,\"title\":\"Prison Architect\",\"steamid\":\"233450\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true},{\"id\":12,\"title\":\"LOCKDOWN Protocol\",\"steamid\":\"2780980\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true},{\"id\":13,\"title\":\"Evil Genius 2\",\"steamid\":\"700600\",\"size\":\"28.9 GB\",\"category\":[\"solo\"],\"isLocked\":true},{\"id\":14,\"title\":\"Colony Survival\",\"steamid\":\"366090\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true}]");
 
 },{}],"km3Ru":[function(require,module,exports,__globalThis) {
 "use strict";
@@ -33953,6 +33937,6 @@ function registerExportsForReactRefresh(module1) {
 },{"7422ead32dcc1e6b":"786KC","630b62916b1ae0e7":"4SQxb"}],"4SQxb":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"name\":\"react-refresh\",\"description\":\"React is a JavaScript library for building user interfaces.\",\"keywords\":[\"react\"],\"version\":\"0.14.2\",\"homepage\":\"https://reactjs.org/\",\"bugs\":\"https://github.com/facebook/react/issues\",\"license\":\"MIT\",\"files\":[\"LICENSE\",\"README.md\",\"babel.js\",\"runtime.js\",\"cjs/\",\"umd/\"],\"main\":\"runtime.js\",\"exports\":{\".\":\"./runtime.js\",\"./runtime\":\"./runtime.js\",\"./babel\":\"./babel.js\",\"./package.json\":\"./package.json\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/facebook/react.git\",\"directory\":\"packages/react\"},\"engines\":{\"node\":\">=0.10.0\"},\"devDependencies\":{\"react-16-8\":\"npm:react@16.8.0\",\"react-dom-16-8\":\"npm:react-dom@16.8.0\",\"scheduler-0-13\":\"npm:scheduler@0.13.0\"}}");
 
-},{}],"irmnC":[function() {},{}]},["aQL8O","bc6lS","4aBH6"], "4aBH6", "parcelRequire94c2")
+},{}],"irmnC":[function() {},{}]},["aQL8O","47lvi","4aBH6"], "4aBH6", "parcelRequire94c2")
 
 //# sourceMappingURL=index.2d3ace14.js.map

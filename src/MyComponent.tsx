@@ -68,7 +68,7 @@ const GameLibrary = () => {
           {filteredGames.map(game => (
             <div key={game.id} className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-200">
               <img
-                src={game.image}
+                src={`https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.steamid}/header.jpg`}
                 alt={game.title}
                 className="w-full object-cover"
               />
@@ -80,31 +80,24 @@ const GameLibrary = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-2">
-                  {game.isDownloaded ? (
-                    <button className="flex-1 bg-gradient-to-r from-green-600 to-green-400 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2">
-                      <CheckCircle size={18} />
-                      Downloaded
-                    </button>
-                  ) : (
-                    <a
-                      href={game.downloadLink}
-                      className={`flex-1 py-2 px-4 rounded-lg flex items-center justify-center gap-2 ${
-                        game.isLocked ? lockedClasses : gradientClasses
-                      } ${startedDownloads[game.id] ? 'bg-green-600' : ''}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => {
-                        if (game.isLocked) {
-                          e.preventDefault();
-                        } else {
-                          handleDownloadClick(game.id);
-                        }
-                      }}
-                    >
-                      {game.isLocked ? <Lock size={18} /> : startedDownloads[game.id] ? <CheckCircle size={18} /> : <Download size={18} />}
-                      {game.isLocked ? 'Locked' : startedDownloads[game.id] ? 'Download Started' : 'Download'}
-                    </a>
-                  )}
+                  <a
+                    href={`https://vmiguel.com/games/${game.steamid}`}
+                    className={`flex-1 py-2 px-4 rounded-lg flex items-center justify-center gap-2 ${
+                      game.isLocked ? lockedClasses : gradientClasses
+                    } ${startedDownloads[game.id] ? 'bg-green-600' : ''}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      if (game.isLocked) {
+                        e.preventDefault();
+                      } else {
+                        handleDownloadClick(game.id);
+                      }
+                    }}
+                  >
+                    {game.isLocked ? <Lock size={18} /> : startedDownloads[game.id] ? <CheckCircle size={18} /> : <Download size={18} />}
+                    {game.isLocked ? 'Locked' : startedDownloads[game.id] ? 'Download Started' : 'Download'}
+                  </a>
                 </div>
               </div>
             </div>
