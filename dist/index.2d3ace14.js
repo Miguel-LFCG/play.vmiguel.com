@@ -2485,7 +2485,7 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"47lvi":[function(require,module,exports,__globalThis) {
+},{}],"bc6lS":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -27226,8 +27226,6 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _lucideReact = require("lucide-react");
-var _gamesJson = require("./games.json");
-var _gamesJsonDefault = parcelHelpers.interopDefault(_gamesJson);
 var _s = $RefreshSig$();
 const GameLibrary = ()=>{
     _s();
@@ -27235,8 +27233,21 @@ const GameLibrary = ()=>{
     const [selectedCategory, setSelectedCategory] = (0, _react.useState)('all');
     const [games, setGames] = (0, _react.useState)([]);
     const [startedDownloads, setStartedDownloads] = (0, _react.useState)({});
+    const [loading, setLoading] = (0, _react.useState)(true);
     (0, _react.useEffect)(()=>{
-        setGames((0, _gamesJsonDefault.default));
+        const fetchGames = async ()=>{
+            try {
+                const response = await fetch('https://plump-almondine-spectrum.glitch.me/games.json');
+                if (!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                setGames(data);
+            } catch (error) {
+                console.error('Error fetching games:', error);
+            } finally{
+                setLoading(false);
+            }
+        };
+        fetchGames();
     }, []);
     const handleDownloadClick = (gameId)=>{
         setStartedDownloads((prev)=>({
@@ -27262,10 +27273,10 @@ const GameLibrary = ()=>{
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                             className: "text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent",
-                            children: "Game Library"
+                            children: "Vmiguel Game Library"
                         }, void 0, false, {
                             fileName: "src/MyComponent.tsx",
-                            lineNumber: 34,
+                            lineNumber: 49,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27276,7 +27287,7 @@ const GameLibrary = ()=>{
                                     size: 20
                                 }, void 0, false, {
                                     fileName: "src/MyComponent.tsx",
-                                    lineNumber: 38,
+                                    lineNumber: 53,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -27287,19 +27298,19 @@ const GameLibrary = ()=>{
                                     className: "bg-gray-900 border border-gray-800 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-64"
                                 }, void 0, false, {
                                     fileName: "src/MyComponent.tsx",
-                                    lineNumber: 39,
+                                    lineNumber: 54,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/MyComponent.tsx",
-                            lineNumber: 37,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/MyComponent.tsx",
-                    lineNumber: 33,
+                    lineNumber: 48,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27314,134 +27325,151 @@ const GameLibrary = ()=>{
                             children: category
                         }, category, false, {
                             fileName: "src/MyComponent.tsx",
-                            lineNumber: 52,
+                            lineNumber: 67,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/MyComponent.tsx",
-                    lineNumber: 50,
+                    lineNumber: 65,
                     columnNumber: 9
                 }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
-                    children: filteredGames.map((game)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-200",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    src: `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.steamid}/header.jpg`,
-                                    alt: game.title,
-                                    className: "w-full object-cover"
-                                }, void 0, false, {
-                                    fileName: "src/MyComponent.tsx",
-                                    lineNumber: 70,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "p-4",
+                loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex justify-center items-center min-h-screen",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"
+                    }, void 0, false, {
+                        fileName: "src/MyComponent.tsx",
+                        lineNumber: 84,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/MyComponent.tsx",
+                    lineNumber: 83,
+                    columnNumber: 11
+                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+                            children: filteredGames.map((game)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-200",
                                     children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                            className: "text-xl font-semibold mb-2",
-                                            children: game.title
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            src: `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.steamid}/header.jpg`,
+                                            alt: game.title,
+                                            className: "w-full object-cover"
                                         }, void 0, false, {
                                             fileName: "src/MyComponent.tsx",
-                                            lineNumber: 76,
-                                            columnNumber: 17
+                                            lineNumber: 92,
+                                            columnNumber: 19
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "flex justify-between items-center text-sm text-gray-400 mb-4",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                children: game.size
-                                            }, void 0, false, {
-                                                fileName: "src/MyComponent.tsx",
-                                                lineNumber: 78,
-                                                columnNumber: 19
-                                            }, undefined)
-                                        }, void 0, false, {
+                                            className: "p-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                    className: "text-xl font-semibold mb-2",
+                                                    children: game.title
+                                                }, void 0, false, {
+                                                    fileName: "src/MyComponent.tsx",
+                                                    lineNumber: 98,
+                                                    columnNumber: 21
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "flex justify-between items-center text-sm text-gray-400 mb-4",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        children: game.size
+                                                    }, void 0, false, {
+                                                        fileName: "src/MyComponent.tsx",
+                                                        lineNumber: 100,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                }, void 0, false, {
+                                                    fileName: "src/MyComponent.tsx",
+                                                    lineNumber: 99,
+                                                    columnNumber: 21
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "flex gap-2",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                        href: `https://vmiguel.com/games/${game.gamefile}`,
+                                                        className: `flex-1 py-2 px-4 rounded-lg flex items-center justify-center gap-2 ${game.isLocked ? lockedClasses : gradientClasses} ${startedDownloads[game.id] ? 'bg-green-600' : ''}`,
+                                                        target: "_blank",
+                                                        rel: "noopener noreferrer",
+                                                        onClick: (e)=>{
+                                                            if (game.isLocked) e.preventDefault();
+                                                            else handleDownloadClick(game.id);
+                                                        },
+                                                        children: [
+                                                            game.isLocked ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lucideReact.Lock), {
+                                                                size: 18
+                                                            }, void 0, false, {
+                                                                fileName: "src/MyComponent.tsx",
+                                                                lineNumber: 120,
+                                                                columnNumber: 42
+                                                            }, undefined) : startedDownloads[game.id] ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lucideReact.CheckCircle), {
+                                                                size: 18
+                                                            }, void 0, false, {
+                                                                fileName: "src/MyComponent.tsx",
+                                                                lineNumber: 120,
+                                                                columnNumber: 91
+                                                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lucideReact.Download), {
+                                                                size: 18
+                                                            }, void 0, false, {
+                                                                fileName: "src/MyComponent.tsx",
+                                                                lineNumber: 120,
+                                                                columnNumber: 119
+                                                            }, undefined),
+                                                            game.isLocked ? 'Locked' : startedDownloads[game.id] ? 'Download Started' : 'Download'
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/MyComponent.tsx",
+                                                        lineNumber: 105,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                }, void 0, false, {
+                                                    fileName: "src/MyComponent.tsx",
+                                                    lineNumber: 104,
+                                                    columnNumber: 21
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "src/MyComponent.tsx",
-                                            lineNumber: 77,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "flex gap-2",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                href: `https://vmiguel.com/games/${game.steamid}`,
-                                                className: `flex-1 py-2 px-4 rounded-lg flex items-center justify-center gap-2 ${game.isLocked ? lockedClasses : gradientClasses} ${startedDownloads[game.id] ? 'bg-green-600' : ''}`,
-                                                target: "_blank",
-                                                rel: "noopener noreferrer",
-                                                onClick: (e)=>{
-                                                    if (game.isLocked) e.preventDefault();
-                                                    else handleDownloadClick(game.id);
-                                                },
-                                                children: [
-                                                    game.isLocked ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lucideReact.Lock), {
-                                                        size: 18
-                                                    }, void 0, false, {
-                                                        fileName: "src/MyComponent.tsx",
-                                                        lineNumber: 98,
-                                                        columnNumber: 38
-                                                    }, undefined) : startedDownloads[game.id] ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lucideReact.CheckCircle), {
-                                                        size: 18
-                                                    }, void 0, false, {
-                                                        fileName: "src/MyComponent.tsx",
-                                                        lineNumber: 98,
-                                                        columnNumber: 87
-                                                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lucideReact.Download), {
-                                                        size: 18
-                                                    }, void 0, false, {
-                                                        fileName: "src/MyComponent.tsx",
-                                                        lineNumber: 98,
-                                                        columnNumber: 115
-                                                    }, undefined),
-                                                    game.isLocked ? 'Locked' : startedDownloads[game.id] ? 'Download Started' : 'Download'
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/MyComponent.tsx",
-                                                lineNumber: 83,
-                                                columnNumber: 19
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/MyComponent.tsx",
-                                            lineNumber: 82,
-                                            columnNumber: 17
+                                            lineNumber: 97,
+                                            columnNumber: 19
                                         }, undefined)
                                     ]
-                                }, void 0, true, {
+                                }, game.id, true, {
                                     fileName: "src/MyComponent.tsx",
-                                    lineNumber: 75,
-                                    columnNumber: 15
-                                }, undefined)
-                            ]
-                        }, game.id, true, {
+                                    lineNumber: 91,
+                                    columnNumber: 17
+                                }, undefined))
+                        }, void 0, false, {
                             fileName: "src/MyComponent.tsx",
-                            lineNumber: 69,
+                            lineNumber: 89,
                             columnNumber: 13
-                        }, undefined))
-                }, void 0, false, {
-                    fileName: "src/MyComponent.tsx",
-                    lineNumber: 67,
-                    columnNumber: 9
-                }, undefined),
-                filteredGames.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "text-center text-gray-400 mt-8",
-                    children: "No games found matching your search criteria"
-                }, void 0, false, {
-                    fileName: "src/MyComponent.tsx",
-                    lineNumber: 108,
-                    columnNumber: 11
-                }, undefined)
+                        }, undefined),
+                        filteredGames.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-center text-gray-400 mt-8",
+                            children: "No games found matching your search criteria"
+                        }, void 0, false, {
+                            fileName: "src/MyComponent.tsx",
+                            lineNumber: 130,
+                            columnNumber: 15
+                        }, undefined)
+                    ]
+                }, void 0, true)
             ]
         }, void 0, true, {
             fileName: "src/MyComponent.tsx",
-            lineNumber: 31,
+            lineNumber: 46,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/MyComponent.tsx",
-        lineNumber: 30,
+        lineNumber: 45,
         columnNumber: 5
     }, undefined);
 };
-_s(GameLibrary, "nR5VpFwNi4aPwSljC74RXa07idQ=");
+_s(GameLibrary, "eBi1SrL63GLukscfGb/q/0X7fT0=");
 _c = GameLibrary;
 exports.default = GameLibrary;
 var _c;
@@ -27452,7 +27480,7 @@ $RefreshReg$(_c, "GameLibrary");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","lucide-react":"ezznk","./games.json":"3YJfs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ezznk":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","lucide-react":"ezznk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ezznk":[function(require,module,exports,__globalThis) {
 /**
  * lucide-react v0.0.1 - ISC
  */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -33789,10 +33817,7 @@ const Search = (0, _createLucideIconMjsDefault.default)("Search", [
     ]
 ]);
 
-},{"../createLucideIcon.mjs":"bSXhu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3YJfs":[function(require,module,exports,__globalThis) {
-module.exports = JSON.parse("[{\"id\":1,\"title\":\"Eco\",\"steamid\":\"382310\",\"size\":\"62.3 GB\",\"category\":[\"multiplayer\",\"light\"],\"isLocked\":true},{\"id\":2,\"title\":\"Cosmoteer\",\"steamid\":\"799600\",\"size\":\"48.1 GB\",\"category\":[\"multiplayer\",\"light\"],\"isLocked\":true},{\"id\":3,\"title\":\"Lethal Compagny\",\"steamid\":\"1966720\",\"size\":\"35.7 GB\",\"category\":[\"multiplayer\",\"horror\"],\"isLocked\":true},{\"id\":4,\"title\":\"Diplomacy Is Not an Option\",\"steamid\":\"1272320\",\"size\":\"28.9 GB\",\"category\":[\"strategy\"],\"isLocked\":true},{\"id\":5,\"title\":\"Snowtopia\",\"steamid\":\"1124260\",\"size\":\"238 MB\",\"category\":[\"strategy\"],\"isLocked\":true},{\"id\":6,\"title\":\"Raft\",\"steamid\":\"648800\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true},{\"id\":7,\"title\":\"Subnautica\",\"steamid\":\"264710\",\"size\":\"28.9 GB\",\"category\":[\"solo\"],\"isLocked\":true},{\"id\":8,\"title\":\"Mini Motorways\",\"steamid\":\"1127500\",\"size\":\"28.9 GB\",\"category\":[\"solo\"],\"isLocked\":true},{\"id\":9,\"title\":\"Factorio\",\"steamid\":\"427520\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true},{\"id\":10,\"title\":\"Planet Coaster 2\",\"steamid\":\"2688950\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true},{\"id\":11,\"title\":\"Prison Architect\",\"steamid\":\"233450\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true},{\"id\":12,\"title\":\"LOCKDOWN Protocol\",\"steamid\":\"2780980\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true},{\"id\":13,\"title\":\"Evil Genius 2\",\"steamid\":\"700600\",\"size\":\"28.9 GB\",\"category\":[\"solo\"],\"isLocked\":true},{\"id\":14,\"title\":\"Colony Survival\",\"steamid\":\"366090\",\"size\":\"28.9 GB\",\"category\":[\"multiplayer\"],\"isLocked\":true}]");
-
-},{}],"km3Ru":[function(require,module,exports,__globalThis) {
+},{"../createLucideIcon.mjs":"bSXhu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports,__globalThis) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 var { version } = require("630b62916b1ae0e7");
@@ -33937,6 +33962,6 @@ function registerExportsForReactRefresh(module1) {
 },{"7422ead32dcc1e6b":"786KC","630b62916b1ae0e7":"4SQxb"}],"4SQxb":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"name\":\"react-refresh\",\"description\":\"React is a JavaScript library for building user interfaces.\",\"keywords\":[\"react\"],\"version\":\"0.14.2\",\"homepage\":\"https://reactjs.org/\",\"bugs\":\"https://github.com/facebook/react/issues\",\"license\":\"MIT\",\"files\":[\"LICENSE\",\"README.md\",\"babel.js\",\"runtime.js\",\"cjs/\",\"umd/\"],\"main\":\"runtime.js\",\"exports\":{\".\":\"./runtime.js\",\"./runtime\":\"./runtime.js\",\"./babel\":\"./babel.js\",\"./package.json\":\"./package.json\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/facebook/react.git\",\"directory\":\"packages/react\"},\"engines\":{\"node\":\">=0.10.0\"},\"devDependencies\":{\"react-16-8\":\"npm:react@16.8.0\",\"react-dom-16-8\":\"npm:react-dom@16.8.0\",\"scheduler-0-13\":\"npm:scheduler@0.13.0\"}}");
 
-},{}],"irmnC":[function() {},{}]},["aQL8O","47lvi","4aBH6"], "4aBH6", "parcelRequire94c2")
+},{}],"irmnC":[function() {},{}]},["aQL8O","bc6lS","4aBH6"], "4aBH6", "parcelRequire94c2")
 
 //# sourceMappingURL=index.2d3ace14.js.map
