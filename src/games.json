@@ -5,7 +5,8 @@
     "steamid": "382310",
     "size": "- GB",
     "category": ["multiplayer", "light"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Eco.zip"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "steamid": "799600",
     "size": "- GB",
     "category": ["multiplayer", "light"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Cosmoteer.zip"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "steamid": "1966720",
     "size": "- GB",
     "category": ["multiplayer", "horror"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Lethal Compagny.zip"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "steamid": "1272320",
     "size": "- GB",
     "category": ["strategy"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Diplomacy Is Not an Option.zip"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "steamid": "1124260",
     "size": "238 MB",
     "category": ["strategy"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Snowtopia.zip"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "steamid": "648800",
     "size": "- GB",
     "category": ["multiplayer"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Raft.zip"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "steamid": "264710",
     "size": "- GB",
     "category": ["solo"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Subnautica.zip"
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "steamid": "1127500",
     "size": "- GB",
     "category": ["solo"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Mini Motorways.zip"
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "steamid": "427520",
     "size": "- GB",
     "category": ["multiplayer"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Factorio.zip"
   },
   {
     "id": 10,
@@ -77,7 +86,8 @@
     "steamid": "2688950",
     "size": "- GB",
     "category": ["multiplayer"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Planet Coaster 2.zip"
   },
   {
     "id": 11,
@@ -85,7 +95,8 @@
     "steamid": "233450",
     "size": "- GB",
     "category": ["multiplayer"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Prison Architect.zip"
   },
   {
     "id": 12,
@@ -93,7 +104,8 @@
     "steamid": "2780980",
     "size": "- GB",
     "category": ["multiplayer"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "LOCKDOWN Protocol.zip"
   },
   {
     "id": 13,
@@ -101,7 +113,8 @@
     "steamid": "700600",
     "size": "- GB",
     "category": ["solo"],
-    "isLocked": true
+    "isLocked": true,
+    "gamefile": "Evil Genius 2.zip"
   },
   {
     "id": 14,
@@ -109,6 +122,7 @@
     "steamid": "366090",
     "size": "74,8 MB",
     "category": ["multiplayer"],
-    "isLocked": false
+    "isLocked": false,
+    "gamefile": "Colony Survival.zip"
   }
 ]

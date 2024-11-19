@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Download, Search, CheckCircle, Lock } from 'lucide-react';
-import gamesData from './games.json';
 
 const GameLibrary = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -9,7 +8,10 @@ const GameLibrary = () => {
   const [startedDownloads, setStartedDownloads] = useState({});
 
   useEffect(() => {
-    setGames(gamesData);
+    fetch('https://vmiguel.com/games/games.json')
+      .then(response => response.json())
+      .then(data => setGames(data))
+      .catch(error => console.error('Error fetching games:', error));
   }, []);
 
   const handleDownloadClick = (gameId) => {
@@ -81,7 +83,7 @@ const GameLibrary = () => {
                 {/* Action Buttons */}
                 <div className="flex gap-2">
                   <a
-                    href={`https://vmiguel.com/games/${game.steamid}.zip`}
+                    href={`https://vmiguel.com/games/${game.gamefile}`}
                     className={`flex-1 py-2 px-4 rounded-lg flex items-center justify-center gap-2 ${
                       game.isLocked ? lockedClasses : gradientClasses
                     } ${startedDownloads[game.id] ? 'bg-green-600' : ''}`}
