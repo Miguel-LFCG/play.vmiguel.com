@@ -8,7 +8,7 @@ const GameLibrary = () => {
   const [startedDownloads, setStartedDownloads] = useState({});
 
   useEffect(() => {
-    fetch('https://vmiguel.com/games/games.json')
+    fetch('http://vmiguel.com/games/games.json')
       .then(response => response.json())
       .then(data => setGames(data))
       .catch(error => console.error('Error fetching games:', error));
