@@ -8,29 +8,11 @@ const GameLibrary = () => {
   const [startedDownloads, setStartedDownloads] = useState({});
 
   useEffect(() => {
-    const downloadAndReplaceGamesJson = async () => {
-      try {
-        const response = await fetch('https://vmiguel.com/games/games.json');
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setGames(data);
-        // Assuming you have a function to save the file locally
-        saveGamesJsonLocally(data);
-      } catch (error) {
-        console.error('Error fetching games:', error);
-      }
-    };
-
-    downloadAndReplaceGamesJson();
+    fetch('https://plump-almondine-spectrum.glitch.me/games.json')
+      .then(response => response.json())
+      .then(data => setGames(data))
+      .catch(error => console.error('Error fetching games:', error));
   }, []);
-
-  const saveGamesJsonLocally = (data) => {
-    // Implement the logic to save the JSON data locally
-    // This could involve writing to local storage, a file system, or another method
-    console.log('Saving games.json locally:', data);
-  };
 
   const handleDownloadClick = (gameId) => {
     setStartedDownloads((prev) => ({ ...prev, [gameId]: true }));
