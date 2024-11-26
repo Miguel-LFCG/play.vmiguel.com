@@ -63,7 +63,7 @@ const GameLibrary = () => {
 
         {/* Categories */}
         <div className="flex gap-4 mb-8">
-          {["all", "solo", "multiplayer"].map(category => (
+          {["all", "solo", "multiplayer", "mini"].map(category => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
